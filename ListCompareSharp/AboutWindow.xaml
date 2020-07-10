@@ -1,0 +1,27 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="AboutWindow"
+        Title="About" Height="206" Width="444" ResizeMode="NoResize"
+        x:Class="ListCompareSharp.AboutWindowDisplay" KeyDown="AboutWindowKeyDown">
+    <Grid>
+        <TextBlock Margin="10" TextWrapping="Wrap" >            
+            <LineBreak />
+            <LineBreak />
+            <Hyperlink Name="HyperlinkGithub" RequestNavigate="HyperlinkRequestNavigate" NavigateUri="https://github.com/BlazyNights/List-Compare-Sharp">
+                Github page
+            </Hyperlink>
+            <LineBreak />
+            <LineBreak />
+            <Hyperlink Name="HyperlinkMit" RequestNavigate="HyperlinkRequestNavigate" NavigateUri="https://tldrlegal.com/license/mit-license#fulltext">
+                Licensed under the MIT License
+            </Hyperlink>
+            <LineBreak />
+            <LineBreak />
+            <Hyperlink Name="HyperlinkIcon" RequestNavigate="HyperlinkRequestNavigate" NavigateUri="https://design.google.com/icons/#ic_filter_b_and_w">
+                Icon from Google 
+            </Hyperlink>
+            <Hyperlink Name="HyperlinkIconLicense" RequestNavigate="HyperlinkRequestNavigate" NavigateUri="https://www.apache.org/licenses/LICENSE-2.0.txt">
+                (Apache License v2)
+            </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

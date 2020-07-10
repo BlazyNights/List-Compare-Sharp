@@ -1,0 +1,36 @@
+﻿<Window 
+       x:Class="ListCompareSharp.InputWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       mc:Ignorable="d"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+       x:Name="InputWindowDisplay" 
+       
+       Title="List Compare" Height="436" Width="634" ResizeMode="CanResizeWithGrip" MinWidth="634" MinHeight="452" >
+    <!--Icon="filter_icon.ico"-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="155*" MinWidth="150"/>
+            <ColumnDefinition Width="158*" MinWidth="150"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="List A" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="List B" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="80" Grid.Column="1"/>
+        <TextBox x:Name="NameBoxA" Height="22" Margin="75,10,20,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" />
+        <TextBox x:Name="NameBoxB" Height="22" Margin="75,10,18,0" TextWrapping="Wrap" Text="B" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox x:Name="ListBoxA" Margin="20,40,20,95" Text="1&#xA;2&#xA;3&#xA;a&#xA;b&#xA;Z&#xA;x&#xA;C&#xD;&#xA;&quot;g&quot;&#xD;&#xA;'G'" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="ListBoxB" Margin="20,40,20,95" Text="3&#xA;4&#xA;5&#xA;A&#xA;B&#xA;z&#xA;x&#xA;c" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1"/>
+        <CheckBox x:Name="CheckboxRemoveCharQuotes" Content="Remove quotes (&quot;, ')" HorizontalAlignment="Left" Margin="20,0,0,70" Grid.ColumnSpan="2" Height="16" VerticalAlignment="Bottom" Width="177"/>
+        <CheckBox x:Name="CheckboxRemoveEmptyLines" Content="Remove empty lines" HorizontalAlignment="Left" Margin="20,0,0,50" Grid.ColumnSpan="2" Height="16" VerticalAlignment="Bottom" IsChecked="True" Width="177" />
+        <Button x:Name="CompareButton" Content="Compare" Margin="0,0,20,39" Click="ButtonCompareClick" Grid.Column="1" HorizontalAlignment="Right" Width="74" Height="22" VerticalAlignment="Bottom"/>
+        <Button x:Name="ButtonAbout" Content="?" Margin="0,0,20,6" Click="ButtonAboutClick" Grid.Column="1" HorizontalAlignment="Right" Width="26" Height="22" VerticalAlignment="Bottom"/>
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Left" Margin="1,41,0,95" Width="3" Opacity="0.5" Background="#FF293955" Foreground="#FF293955"/>
+        <CheckBox x:Name="CheckboxTrimWhitespace" Content="Trim whitespace at ends" HorizontalAlignment="Left" Margin="20,0,0,30" IsChecked="True" Width="177" Height="16" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <CheckBox x:Name="CheckboxRemoveCustomChars" Content="Remove custom characters:" Margin="20,0,125,10" Height="15" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextboxCustomChars" HorizontalAlignment="Left" Margin="190,0,0,5" Text="`~!@#$%^&amp;*()-_+=\|/?&lt;&gt;,.{}[]" Width="287" Grid.ColumnSpan="2" Height="23" VerticalAlignment="Bottom" MaxLines="1" ToolTip="Enter chars you'd like to filter out, don't use spaces or any delimiter" VerticalScrollBarVisibility="Disabled"/>
+        <RadioButton x:Name="RadioCaseMatch" Content="Match case" HorizontalAlignment="Left" Margin="220,0,0,70" GroupName="radio_case" Height="16" VerticalAlignment="Bottom" Width="154" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="RadioCaseUpper" Content="Convert to uppercase" HorizontalAlignment="Left" Margin="220,0,0,50" GroupName="radio_case" Height="16" VerticalAlignment="Bottom" Width="154" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="RadioCaseLower" Content="Convert to lowercase" HorizontalAlignment="Left" Margin="220,0,0,30" GroupName="radio_case" IsChecked="True" Height="18" VerticalAlignment="Bottom" Width="154" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window> 
